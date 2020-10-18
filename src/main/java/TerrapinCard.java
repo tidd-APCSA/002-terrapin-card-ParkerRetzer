@@ -36,7 +36,7 @@ public class TerrapinCard {
 
   public String toString(){
 
-    return "The card has " + this.getBalence() + " dollars";
+    return "The card has " + this.balence + " dollars";
   }
 
   
