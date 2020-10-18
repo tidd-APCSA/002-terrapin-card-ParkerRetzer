@@ -5,21 +5,6 @@ public class TerrapinCard {
     this.balence = balence;
   }
 
-  public double getBalence(){
-    return this.balence;
-  }
-
-  public void loadMoney(double amount){
-   
-    if (amount < 0){
-    this.balence = this.balence;
-    } else if ((this.balence + amount) > 150){
-      this.balence = 150;
-    } else {
-      this.balence += amount;
-    }
-  }
-
   public void payEconomical(){
     if(this.balence >= 2.5){
     this.balence = balence - 2.5;
@@ -32,10 +17,22 @@ public class TerrapinCard {
     }
   }
 
-  
+  public void loadMoney(double amount){
+   
+    if (amount < 0){
+      this.balence = this.balence;
+    } else if ((this.balence + amount) > 150){
+      this.balence = 150;
+    } else {
+      this.balence += amount;
+    }
+  }
+
+  public double getBalance(){
+    return this.balence;
+  }
 
   public String toString(){
-
     return "The card has " + this.balence + " dollars";
   }
 
