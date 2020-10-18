@@ -9,17 +9,23 @@ public class CardRunner {
         // System.out.println(brian);
         cardBilly.payGourmet();
         System.out.println("Billy: " + cardBilly);
+
         cardBrian.payEconomical();
         System.out.println("Brian: " + cardBrian);
+
         cardBilly.loadMoney(20);
         System.out.println("Billy: " + cardBilly);
+
         cardBrian.payGourmet();
         System.out.println("Brian: " + cardBrian);
+
         cardBilly.payEconomical();
         cardBilly.payEconomical();
         System.out.println("Billy: " + cardBilly);
+
         cardBrian.loadMoney(50);
         System.out.println("Brian: " + cardBrian);
+        
         
         //economic = -2.5, gourmet = -4
         

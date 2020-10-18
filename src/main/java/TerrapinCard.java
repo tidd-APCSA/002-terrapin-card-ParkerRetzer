@@ -4,34 +4,35 @@ public class TerrapinCard {
   public TerrapinCard(double balence){
     this.balence = (double)balence;
   }
-  
+
+  public double getBalence(){
+    return this.balence;
+  }
+
   public void loadMoney(double amount){
-    boolean balenceCap = this.balence + amount < 150;
-    boolean balenceMin = this.balence + amount > 0;
-    if (balenceCap == true && balenceMin == true){
-    this.balence += (double)amount;
-    } else if (balenceCap == false && balenceMin == true){
+   
+    if (amount < 0){
+    this.balence = this.balence;
+    } else if (balence + amount > 150){
       this.balence = 150;
+    } else {
+      this.balence += amount;
     }
   }
 
   public void payEconomical(){
-    boolean enough = this.balence > 2.49;
-    if(enough == true){
+    if(balence >= 2.5){
     this.balence -= 2.5;
     }
   }
 
   public void payGourmet(){
-    boolean enough = this.balence > 3.9;
-    if(enough == true){
+    if(balance >= 4.0){
     this.balence -= 4.0;
     }
   }
 
-  public double getBalence(){
-    return this.balence;
-  }
+  
 
   public String toString(){
 
